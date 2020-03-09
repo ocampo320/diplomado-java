@@ -1,14 +1,12 @@
-package diplomado_poo_ejercicio1;
-
-import java.util.ArrayList;
-import java.util.List;
+package diplomado_poo_ejercicio1_libros;
 
 public class Libro {
 
 	private String autor = "";
 	private String titulo = "";
 	private int paginas = 0;
-	private List<Libro> listaLibros=new ArrayList<Libro>();
+	private int idLibro=0;
+	private static int contador=0;
 
 	public String getAutor() {
 		return autor;
@@ -36,6 +34,7 @@ public class Libro {
 
 	public Libro(String autor, String titulo, int paginas) {
 		super();
+		this.idLibro=++contador;
 		this.autor = autor;
 		this.titulo = titulo;
 		this.paginas = paginas;
@@ -45,29 +44,25 @@ public class Libro {
 		super();
 	}
 
+	
+
+	public int getIdLibro() {
+		return idLibro;
+	}
+
+	public void setIdLibro(int idLibro) {
+		this.idLibro = idLibro;
+	}
+
 	@Override
 	public String toString() {
-		return "Libro [el libro=" + titulo + ", " + "del autor=" + autor + ",tiene  paginas=" + paginas + "]";
+		return "Libro [ id_Libro=" +idLibro+" autor=" + autor + ", titulo=" + titulo + ", paginas=" + paginas + "]\n";
 	}
-	
-	public int comprarLibros(int paginasCompra)
-	{
-		
-		for (int i = 0; i < listaLibros.size(); i++) {
-			
-			if (listaLibros.get(paginasCompra) != null) {
-				
-			}
-			
-			
-		}
-		
-		
-		
+
+	public int comprarLibros(int buscarId) {
 		
 		return paginas;
-		
-		
+
 	}
 
 }
