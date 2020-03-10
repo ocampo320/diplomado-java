@@ -3,8 +3,7 @@ package agendaTelefonica;
 public class Contacto {
 	private String nombre="";
 	private String numero="";
-	static int contador=0;
-	private int disponible=0;
+	
 	
 	public String getNombre() {
 		return nombre;
@@ -22,7 +21,7 @@ public class Contacto {
 		super();
 		this.nombre = nombre;
 		this.numero = numero;
-		this.disponible=++contador;
+		
 	}
 	public Contacto() {
 		super();
