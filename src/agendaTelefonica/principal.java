@@ -8,21 +8,30 @@ public class principal {
 
 	public static void main(String[] args) {
 
-		String nombreContacto = "";
-		String telefonoContacto = "";
-		Scanner datosIngrear = new Scanner(System.in);
-//		
-//		JOptionPane.showInputDialog("Ingrese el Nombre del contacto");
-//		nombreContacto=datosIngrear.nextLine();		
-//		
-//		JOptionPane.showInputDialog("Ingrese el numero del contacto");
-//		telefonoContacto=datosIngrear.nextLine();	
+		
+		agenda agenditAgenda=new agenda();
+		Contacto contacto1=new Contacto();
+		Contacto contacto2=new Contacto();
+		Contacto contacto3=new Contacto();
+		
+		contacto1.setNombre("deivi");
+		contacto1.setNumero("22222");
+		
 
-		agenda agenda1 = new agenda("deivi", "2220718");
-		agenda1.ingresarContacto(agenda1);
+		contacto2.setNombre("carlos");
+		contacto2.setNumero("00000");
 
-		System.out.println(agenda1.mostrar());
 
+		contacto3.setNombre("juan");
+		contacto3.setNumero("33333");
+		
+		
+		agenditAgenda.ingresarContacto(contacto1);
+		agenditAgenda.ingresarContacto(contacto2);
+		agenditAgenda.ingresarContacto(contacto3);
+		agenditAgenda.listarContactos();
+		agenditAgenda.buscarContacto("deivi");
+		System.out.println("disponibles: "+ agenditAgenda.disponible());
 	}
 
 }
